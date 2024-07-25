@@ -4,10 +4,11 @@ import com.sun.tools.javac.Main;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
+
 
 public class Calculator {
     private double total;
+    List<Double> arr = new ArrayList<>();
 
     public double calculate(int num1, int num2, char ch) throws ArithmeticException{
 
@@ -45,11 +46,20 @@ public class Calculator {
     }
 
     public void removeResult(String remove){
-        List<Double> arr = new ArrayList<>();
         arr.add(total);
         if(remove.equals("remove")){
             arr.remove(0);
         }
+
+    }
+
+    public void inquiryResults(String inquiry) {
+        if(inquiry.equals("inquiry")){
+            for(double all : arr){
+                System.out.print(all + " ");
+            }
+        }
+
 
     }
 }
