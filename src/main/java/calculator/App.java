@@ -28,10 +28,16 @@ public class App {
             System.out.print("사칙연산 기호를 입력하세요: ");
             char ch = sc.next().charAt(0);
 
-            cl.calculate(num1, num2, ch);
+            try{
+                cl.calculate(num1, num2, ch);
+            } catch (ArithmeticException e){
+                System.out.println(e.getMessage());
+                System.out.println("값이 0이 출력됩니다. 제거해주세요.");
+            }
+
 
             double result;
-            result = cl.total;
+            result = cl.getTotal();
 
 
             System.out.println("결과: " + result);

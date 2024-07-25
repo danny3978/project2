@@ -1,27 +1,37 @@
 package calculator;
 
 public class Calculator {
-    double total;
+    private double total;
 
     public double calculate(int num1, int num2, char ch) throws ArithmeticException{
 
 
 
-            if(ch == '+'){
-                total = num1 + num2;
-            } else if(ch == '-'){
-                total = num1 - num2;
-            } else if(ch == '*'){
-                total = num1 * num2;
-            } else if(ch == '/'){
-                try{
+            switch (ch){
+                case '+' :
+                   total = num1 + num2;
+                    break;
+                case '-':
+                    total = num1 - num2;
+                    break;
+                case '*':
+                    total = num1 * num2;
+                case '/':
+                    if(num2 == 0){
+                        throw new ArithmeticException("0으로 나눌 수 없습니다.");
+                    }
                     total = (double) num1 / num2;
-                } catch (ArithmeticException er){
-                    System.out.println("0으로 나눌 수 없습니다");
-                    System.out.println("0이 출력됩니다. 제거해주세요");
-                }
+                    break;
             }
             return total;
     }
 
+    public double getTotal(){
+        return total;
+    }
+
+    public double setTotal(double total){
+        this.total = total;
+        return this.total;
+    }
 }
