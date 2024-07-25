@@ -22,6 +22,9 @@ public class ArithmeticCalculator extends Calculator{
                 }
                 setTotal(divideOperator.operate(num1,num2));
                 break;
+            case '%':
+                ModOperator modOperator = new ModOperator();
+                setTotal(modOperator.operate(num1,num2));
         }
 
     }
