@@ -9,7 +9,7 @@ public class App {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        List<Integer> arr = new ArrayList<>();
+        List<Double> arr = new ArrayList<>();
 
         Calculator cl = new Calculator();
 
@@ -30,9 +30,8 @@ public class App {
 
             cl.calculate(num1, num2, ch);
 
-            int result = 0;
+            double result;
             result = cl.total;
-
 
 
             System.out.println("결과: " + result);
@@ -47,7 +46,7 @@ public class App {
 
             System.out.println("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회)");
             if(sc.next().equals("inquiry")){
-                for(int all : arr){
+                for(double all : arr){
                     System.out.print(all + " ");
                 }
             }
