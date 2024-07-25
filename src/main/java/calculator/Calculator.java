@@ -8,8 +8,13 @@ public class Calculator {
     private double total;
     List<Double> arr = new ArrayList<>();
 
+    final double PI = 3.14;
+    // 원주율은 변하지 않기 때문에 값이 변하지 않는 final을 씀
+    private double o;
+
+
     Calculator(){
-        this.arr.clear();
+
     }
 
     public void calculate(int num1, int num2, char ch) throws ArithmeticException{
@@ -59,7 +64,20 @@ public class Calculator {
                 System.out.print(all + " ");
             }
         }
-
-
     }
+
+
+    public void calculateCircleArea(int ban) {
+        setO(ban * ban * PI);
+        System.out.println(this.o);
+    }
+
+    public double getO(){
+        return o;
+    }
+    public void setO(double num1){
+        this.o = num1;
+    }
+
+
 }
