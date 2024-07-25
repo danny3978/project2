@@ -5,21 +5,26 @@ public class ArithmeticCalculator extends Calculator{
 
         switch (ch){
             case '+' :
-                setTotal(num1 + num2);
-                break;
+                AddOperator addOperator = new AddOperator();
+                setTotal(addOperator.operate(num1,num2));
             case '-':
-                setTotal(num1 - num2);
+                SubtractOperator subtractOperator = new SubtractOperator();
+                setTotal(subtractOperator.operate(num1,num2));
                 break;
             case '*':
-                setTotal(num1 * num2);
+                MultiplyOperator multiplyOperator = new MultiplyOperator();
+                setTotal(multiplyOperator.operate(num1,num2));
                 break;
             case '/':
+                DivideOperator divideOperator = new DivideOperator();
                 if(num2 == 0){
                     throw new ArithmeticException("0으로 나눌 수 없습니다.");
                 }
-                setTotal((double) num1 / num2);
+                setTotal(divideOperator.operate(num1,num2));
                 break;
         }
 
     }
 }
+
+
