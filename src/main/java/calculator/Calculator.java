@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Calculator {
      private static double total;
-     List<Double> arr = new ArrayList<>();
+     static List<Double> arr = new ArrayList<>();
 
 
     Calculator(){
@@ -19,7 +19,7 @@ public class Calculator {
         System.out.println("결과: " + total);
     }
 
-    public double getTotal(){
+    public static double getTotal(){
         return total;
     }
 
@@ -27,7 +27,7 @@ public class Calculator {
         Calculator.total = total;
     }
 
-    public void removeResult(String remove){
+    public static void removeResult(String remove){
         arr.add(getTotal());
         if(remove.equals("remove")){
             arr.remove(0);
@@ -35,7 +35,7 @@ public class Calculator {
 
     }
 
-    public void inquiryResults(String inquiry) {
+    public static void inquiryResults(String inquiry) {
         if(inquiry.equals("inquiry")){
             for(double all : arr){
                 System.out.print(all + " ");
