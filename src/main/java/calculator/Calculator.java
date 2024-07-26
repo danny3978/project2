@@ -5,18 +5,17 @@ import java.util.List;
 
 
 public class Calculator {
-    private double total;
-    List<Double> arr = new ArrayList<>();
+     private static double total;
+     List<Double> arr = new ArrayList<>();
 
 
     Calculator(){
 
     }
 
-    public void calculate(int num1, int num2, char ch){
-        ArithmeticCalculator arithmeticCalculator = new ArithmeticCalculator();
+    public static void calculate(int num1, int num2, char ch){
 
-        arithmeticCalculator.calculate(num1, num2, ch);
+        ArithmeticCalculator.calculate(num1, num2, ch);
         System.out.println("결과: " + total);
     }
 
@@ -24,12 +23,12 @@ public class Calculator {
         return total;
     }
 
-    public void setTotal(double total){
-        this.total = total;
+    public static void setTotal(double total){
+        Calculator.total = total;
     }
 
     public void removeResult(String remove){
-        this.arr.add(getTotal());
+        arr.add(getTotal());
         if(remove.equals("remove")){
             arr.remove(0);
         }
@@ -38,7 +37,7 @@ public class Calculator {
 
     public void inquiryResults(String inquiry) {
         if(inquiry.equals("inquiry")){
-            for(double all : this.arr){
+            for(double all : arr){
                 System.out.print(all + " ");
             }
         }

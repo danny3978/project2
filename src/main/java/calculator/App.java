@@ -1,18 +1,12 @@
 package calculator;
 
-import java.util.InputMismatchException;
+
 import java.util.Scanner;
 
 public class App {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        Calculator cl = new Calculator();
-        CircleCalculator circleCalculator = new CircleCalculator();
-
-
-
 
         while(true) {
             System.out.println("반지름으로 원의 넓이를 구하시겠습니까?");
@@ -21,7 +15,7 @@ public class App {
             if (sc.next().equals("yes")) {
 
                 System.out.print("반지름을 입력하세요: ");
-                circleCalculator.calculateCircleArea(sc.nextInt());
+                CircleCalculator.calculateCircleArea(sc.nextInt());
                 break;
             } else {
                 System.out.print("첫 번째 숫자를 입력하세요: ");
@@ -34,7 +28,7 @@ public class App {
                 char ch = sc.next().charAt(0);
 
                 try {
-                    cl.calculate(num1, num2, ch);
+                    Calculator.calculate(num1, num2, ch);
                 } catch (ArithmeticException e) {
                     System.out.println(e.getMessage());
                     System.out.println("값이 0이 출력됩니다. 제거해주세요.");
