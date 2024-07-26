@@ -7,7 +7,7 @@ public class CircleCalculator extends Calculator{
 
     public static void calculateCircleArea(int ban) {
          setO(ban * ban * PI);
-        System.out.println(o);
+        System.out.println("원의 넓이 : " + o);
     }
 
     public static double geto(){

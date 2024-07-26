@@ -30,8 +30,16 @@ public class App {
                 System.out.print("사칙연산 기호를 입력하세요: ");
                 char ch = sc.next().charAt(0);
 
-
+                if(ch == '+' || ch == '-' || ch == '*' || ch == '/' || ch == '%'){
                     Calculator.calculate(num1, num2, ch);
+                } else{
+                    System.out.println("연산 기호가 아닙니다.");
+                    System.out.println();
+                    continue;
+                }
+
+
+
                 }catch (InputMismatchException er){
                     System.out.println("숫자가 아닙니다.");
                     System.out.println();

@@ -24,9 +24,7 @@ public class ArithmeticCalculator extends Calculator{
             case '%':
                 setTotal(ModOperator.operate(num1, num2));
                 break;
-            default:
-                System.out.println("연산 기호가 아닙니다.");
-                System.out.println();
+
 
         }
 
