@@ -1,6 +1,8 @@
 package calculator;
 
 
+
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class App {
@@ -18,6 +20,7 @@ public class App {
                 CircleCalculator.calculateCircleArea(sc.nextInt());
                 break;
             } else {
+                try{
                 System.out.print("첫 번째 숫자를 입력하세요: ");
                 int num1 = sc.nextInt();
 
@@ -27,13 +30,17 @@ public class App {
                 System.out.print("사칙연산 기호를 입력하세요: ");
                 char ch = sc.next().charAt(0);
 
-                try {
+
                     Calculator.calculate(num1, num2, ch);
+                }catch (InputMismatchException er){
+                    System.out.println("숫자가 아닙니다.");
+                    System.out.println();
+                    continue;
                 } catch (ArithmeticException e) {
                     System.out.println(e.getMessage());
-                    System.out.println("값이 0이 출력됩니다. 제거해주세요.");
+                    System.out.println();
+                    continue;
                 }
-
 
 
                 System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제)");
