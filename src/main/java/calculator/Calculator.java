@@ -13,9 +13,10 @@ public class Calculator {
 
     }
 
-    public void calculate(int num1, int num2, OperatorType ch){
-        ArithmeticCalculator at = new ArithmeticCalculator();
-        at.calculate(num1, num2, ch);
+    public void calculate(double num1, double num2, OperatorType ch){
+
+        ArithmeticCalculator<Double, Double,OperatorType> ai = new ArithmeticCalculator<Double, Double, OperatorType>();
+        ai.calculate(num1, num2, ch);
         System.out.println("결과: " + total);
     }
 

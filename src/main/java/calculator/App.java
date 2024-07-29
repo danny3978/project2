@@ -25,10 +25,10 @@ public class App {
             } else {
                 try{
                 System.out.print("첫 번째 숫자를 입력하세요: ");
-                int num1 = sc.nextInt();
+                double num1 = sc.nextDouble();
 
                 System.out.print("두 번째 숫자를 입력하세요: ");
-                int num2 = sc.nextInt();
+                double num2 = sc.nextDouble();
 
                 System.out.print("사칙연산 기호를 입력하세요: ");
                 char ch = sc.next().charAt(0);
