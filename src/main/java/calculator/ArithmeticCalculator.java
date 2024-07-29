@@ -1,28 +1,26 @@
 package calculator;
 
-import static calculator.OperatorType.*;
 
-public class ArithmeticCalculator<T, U, E>{
-    private Calculator cl = new Calculator();
+public class ArithmeticCalculator extends Calculator{
 
-    public void calculate(T t, U u, E e) {
+    public void calculate(double num1, double num2, OperatorType type) {
 
-        switch ((OperatorType) e){
-            case Add:
-                cl.setTotal(AddOperator.operate((double)t, (double)u));
-                break;
-            case Subs:
-                cl.setTotal(SubtractOperator.operate((double)t, (double)u));
-                break;
-            case Mul:
-                cl.setTotal(MultiplyOperator.operate((double)t, (double)u));
-                break;
-            case Div:
-                cl.setTotal(DivideOperator.operate((double)t, (double)u));
-                break;
-            case Mod:
-                cl.setTotal(ModOperator.operate((double)t, (double)u));
-                break;
+        switch (type) {
+            case Add ->
+                setTotal(AddOperator.operate(num1, num2));
+
+            case Subs ->
+                setTotal(SubtractOperator.operate(num1, num2));
+
+            case Mul ->
+                setTotal(MultiplyOperator.operate(num1, num2));
+
+            case Div ->
+                setTotal(DivideOperator.operate(num1, num2));
+
+            case Mod ->
+                setTotal(ModOperator.operate(num1, num2));
+
         }
 
 
