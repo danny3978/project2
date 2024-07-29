@@ -13,21 +13,21 @@ public class Calculator {
 
     }
 
-    public static void calculate(int num1, int num2, char ch){
-
-        ArithmeticCalculator.calculate(num1, num2, ch);
+    public void calculate(int num1, int num2, OperatorType ch){
+        ArithmeticCalculator at = new ArithmeticCalculator();
+        at.calculate(num1, num2, ch);
         System.out.println("결과: " + total);
     }
 
-    public static double getTotal(){
+    public double getTotal(){
         return total;
     }
 
-    public static void setTotal(double total){
+    public void setTotal(double total){
         Calculator.total = total;
     }
 
-    public static void removeResult(String remove){
+    public void removeResult(String remove){
         arr.add(getTotal());
         if(remove.equals("remove")){
             arr.remove(0);
@@ -35,7 +35,7 @@ public class Calculator {
 
     }
 
-    public static void inquiryResults(String inquiry) {
+    public void inquiryResults(String inquiry) {
         if(inquiry.equals("inquiry")){
             for(double all : arr){
                 System.out.print(all + " ");
