@@ -11,6 +11,7 @@ public class ArithmeticCalculator<T, U, E > extends Calculator{
 
 
     private static BinaryOperator<Double> getOperator(OperatorType type){
+
         return switch (type){
             case Add -> new AddOperator();
             case Subs -> new SubtractOperator();

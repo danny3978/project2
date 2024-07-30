@@ -18,7 +18,6 @@ public class App {
             System.out.println("yes or no");
 
             if (sc.next().equals("yes")) {
-
                 System.out.print("반지름을 입력하세요: ");
                 ci.calculateCircleArea(sc.nextInt());
                 System.out.println();
