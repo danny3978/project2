@@ -1,5 +1,5 @@
 package calculator;
 
-public interface BinaryOperator<T>{
-    T apply (T num1, T num2);
+public interface BinaryOperator<T> {
+    T apply (T t1, T t2);
 }
