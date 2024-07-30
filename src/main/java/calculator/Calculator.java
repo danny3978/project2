@@ -15,8 +15,8 @@ public class Calculator {
 
     public void calculate(double ignoredNum1, double ignoredNum2, OperatorType ignoredCh){
 
-        ArithmeticCalculator ai = new ArithmeticCalculator();
-        ai.calculate(ignoredNum1, ignoredNum2, ignoredCh);
+        ArithmeticCalculator<Double,Double,OperatorType> ai = new ArithmeticCalculator<>();
+        ai.arithmeticCalculator(ignoredNum1, ignoredNum2, ignoredCh);
         System.out.println("결과: " + total);
     }
 
