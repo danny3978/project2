@@ -1,17 +1,8 @@
 package calculator;
 
-public class ModOperator {
-    private static int mod;
-    public static int operate(double num1, double num2) {
-        setMod((int) (num1 % num2));
-        return getMod();
-    }
-
-    public static int getMod() {
-        return mod;
-    }
-
-    public static void setMod(int mod) {
-        ModOperator.mod = mod;
+public class ModOperator implements BinaryOperator<Double>{
+    @Override
+    public Double apply(Double num1, Double num2) throws ArithmeticException{
+        return num1 % num2;
     }
 }

@@ -1,7 +1,8 @@
 package calculator;
 
-public class MultiplyOperator {
-    public static double operate(double num1, double num2) {
+public class MultiplyOperator implements BinaryOperator<Double>{
+    @Override
+    public Double apply(Double num1, Double num2) throws ArithmeticException{
         return num1 * num2;
     }
 }

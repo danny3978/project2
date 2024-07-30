@@ -1,7 +1,9 @@
 package calculator;
 
-public class DivideOperator {
-    public static double operate(double num1, double num2) throws ArithmeticException {
+public class DivideOperator implements BinaryOperator<Double> {
+
+    @Override
+    public Double apply(Double num1, Double num2) throws ArithmeticException{
         if(num2 == 0){
             throw new ArithmeticException("0으로 나눌 수 없습니다.");
         }
