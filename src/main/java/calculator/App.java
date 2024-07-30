@@ -21,7 +21,11 @@ public class App {
 
                 System.out.print("반지름을 입력하세요: ");
                 ci.calculateCircleArea(sc.nextInt());
-                break;
+                System.out.println();
+                System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
+                if (sc.next().equals("exit")) {
+                    break;
+                }
             } else {
                 try{
                 System.out.print("첫 번째 숫자를 입력하세요: ");

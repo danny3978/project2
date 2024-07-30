@@ -13,10 +13,10 @@ public class Calculator {
 
     }
 
-    public void calculate(double ignoredNum1, double ignoredNum2, OperatorType ignoredCh){
+    public void calculate(double num1, double num2, OperatorType ch){
 
         ArithmeticCalculator<Double,Double,OperatorType> ai = new ArithmeticCalculator<>();
-        ai.arithmeticCalculator(ignoredNum1, ignoredNum2, ignoredCh);
+        ai.arithmeticCalculator(num1, num2, ch);
         System.out.println("결과: " + total);
     }
 
