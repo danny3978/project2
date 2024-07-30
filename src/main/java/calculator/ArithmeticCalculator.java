@@ -14,7 +14,7 @@ public class ArithmeticCalculator<T, U, E > extends Calculator{
 
         return switch (type){
             case Add -> new AddOperator();
-            case Subs -> new SubtractOperator();
+            case Subs -> new SubstractOperator();
             case Mod -> new ModOperator();
             case Div -> new DivideOperator();
             case Mul -> new MultiplyOperator();

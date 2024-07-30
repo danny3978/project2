@@ -2,7 +2,7 @@ package calculator;
 
 public class MultiplyOperator implements BinaryOperator<Double>{
     @Override
-    public Double apply(Double num1, Double num2) throws ArithmeticException{
-        return num1 * num2;
+    public Double apply(Double t1, Double t2) {
+        return t1 * t2;
     }
 }
