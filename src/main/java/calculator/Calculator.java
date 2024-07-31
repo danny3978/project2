@@ -5,8 +5,8 @@ import java.util.List;
 
 
 public class Calculator {
-     private static double total;
-     static List<Double> arr = new ArrayList<>();
+    private static double total;
+    static List<Double> arr = new ArrayList<>();
 
 
     Calculator(){
