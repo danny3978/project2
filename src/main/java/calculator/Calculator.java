@@ -5,14 +5,14 @@ import java.util.List;
 
 
 public class Calculator {
-     private static double total;
-     static List<Double> arr = new ArrayList<>();
+    private static double total;
+    static List<Double> arr = new ArrayList<>();
 
 
     Calculator(){
 
     }
-
+/// 음.. 테스트
     public void calculate(double num1, double num2, OperatorType ch){
 
         ArithmeticCalculator<Double,Double,OperatorType> ai = new ArithmeticCalculator<>();
